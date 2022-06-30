@@ -10,7 +10,7 @@ import pandas as pd
 
 from PIL import Image
 import os
-import cv2
+#import cv2
 import streamlit as st
 
 # %% [code] {"execution":{"iopub.status.busy":"2022-06-29T14:32:18.86496Z","iopub.execute_input":"2022-06-29T14:32:18.865601Z","iopub.status.idle":"2022-06-29T14:32:33.756091Z","shell.execute_reply.started":"2022-06-29T14:32:18.865566Z","shell.execute_reply":"2022-06-29T14:32:33.754962Z"}}
