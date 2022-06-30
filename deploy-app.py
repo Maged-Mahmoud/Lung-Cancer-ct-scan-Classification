@@ -55,7 +55,7 @@ uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
 if uploaded_file is not None:
     
     image = Image.open(uploaded_file).resize((460,460))
-    show.image(u_img, 'Uploaded Image', use_column_width=True)
+    show.image(image, 'Uploaded Image', use_column_width=True)
     # We preprocess the image to fit in algorithm.
 
     
@@ -72,7 +72,7 @@ if st.sidebar.button("Click Here to Classify"):
         
         with st.spinner('Classifying ...'):
             
-            prediction = predict(u_img)
+            prediction = predict(image)
             time.sleep(2)
             st.success('Done!')
             
