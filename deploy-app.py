@@ -42,8 +42,8 @@ st.title("Lung Cancer CT-SCAN Classification App")
 # For newline
 st.write('\n')
 
-image = Image.open('images/image.png')
-show = st.image(image, use_column_width=True)
+img = Image.open('images/image.png')
+show = st.image(img, use_column_width=True)
 
 st.sidebar.title("Upload Image")
 
@@ -54,7 +54,7 @@ uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
 
 if uploaded_file is not None:
     
-    image = Image.open(uploaded_file).resize((460,460),3)
+    image = Image.open(uploaded_file).resize((460,460),Image.Resampling.LANCZOS)
     show.image(image, 'Uploaded Image', use_column_width=True)
     # We preprocess the image to fit in algorithm.
 
