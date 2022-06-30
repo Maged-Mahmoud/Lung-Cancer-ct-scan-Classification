@@ -1,9 +1,10 @@
+pip == 22.1.2
 tensorflow
 keras
 numpy
 matplotlib
 pandas
-PIL
+PIL ==9.1.1
 os
 CV2
 streamlit
