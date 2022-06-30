@@ -3,7 +3,9 @@ import tensorflow.keras as keras
 from tensorflow.keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
 import tensorflow as tf
 from tensorflow.keras.applications import resnet, vgg16 , vgg19, densenet, efficientnet, mobilenet_v2
+from tensorflow.python.ops.numpy_ops import np_config
 
+np_config.enable_numpy_behavior()
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
