@@ -26,8 +26,8 @@ classes = {0:'adenocarcinoma',1:'large.cell.carcinoma',2:'normal',3:'squamous.ce
 # %% [code] {"execution":{"iopub.status.busy":"2022-06-29T14:45:37.097095Z","iopub.execute_input":"2022-06-29T14:45:37.097535Z","iopub.status.idle":"2022-06-29T14:45:37.119596Z","shell.execute_reply.started":"2022-06-29T14:45:37.097502Z","shell.execute_reply":"2022-06-29T14:45:37.118404Z"}}
 # Predict Function
 def predict(image):
-    #my_image = np.asarray(image)
-    my_image = image.reshape((1, 460, 460,3))
+    my_image = img_to_array(image)
+    my_image = image.reshape((1, 460, 460,4))
     if np.max(ResNet_model.predict(my_image)) >=  np.max(DenseNet_model.predict(my_image)):
         y_pred = np.argmax(ResNet_model.predict(my_image))
     else:
