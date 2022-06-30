@@ -5,6 +5,5 @@ numpy
 matplotlib
 pandas
 Pillow ==9.1.1
-os
 CV2
 streamlit
