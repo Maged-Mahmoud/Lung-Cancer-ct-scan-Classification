@@ -54,7 +54,7 @@ uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
 
 if uploaded_file is not None:
     
-    u_img = load_img(uploaded_file, target_size=(460, 460))
+    image = Image.open(uploaded_file).resize((460,460))
     show.image(u_img, 'Uploaded Image', use_column_width=True)
     # We preprocess the image to fit in algorithm.
 
