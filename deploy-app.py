@@ -54,10 +54,10 @@ uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
 
 if uploaded_file is not None:
     
-    u_img = Image.open(uploaded_file).resize(460,460)
+    u_img = Image.open(uploaded_file)
     show.image(u_img, 'Uploaded Image', use_column_width=True)
     # We preprocess the image to fit in algorithm.
-    
+    u_img = u_img.resize((460,460))
 # For newline
 st.sidebar.write('\n')
     
