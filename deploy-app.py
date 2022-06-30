@@ -27,7 +27,7 @@ classes = {0:'adenocarcinoma',1:'large.cell.carcinoma',2:'normal',3:'squamous.ce
 # Predict Function
 def predict(image):
     my_image = img_to_array(image)
-    my_image = image.reshape((1, 460, 460,4))
+    my_image = image.reshape((1, 460, 460,3))
     if np.max(ResNet_model.predict(my_image)) >=  np.max(DenseNet_model.predict(my_image)):
         y_pred = np.argmax(ResNet_model.predict(my_image))
     else:
@@ -54,7 +54,7 @@ uploaded_file = st.sidebar.file_uploader(" ",type=['png', 'jpg', 'jpeg'] )
 
 if uploaded_file is not None:
     
-    image = Image.open(uploaded_file).resize((460,460))
+    image = Image.open(uploaded_file).resize((460,460),3)
     show.image(image, 'Uploaded Image', use_column_width=True)
     # We preprocess the image to fit in algorithm.
 
