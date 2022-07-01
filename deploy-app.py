@@ -82,6 +82,7 @@ if st.sidebar.button("Click Here to Classify"):
                 
         # Classify output 
         st.header(f"{str.upper(prediction)}.", '\n' )
+        st.markdown(f'<h1 style="color:#33ff33;font-size:24px;">{prediction}</h1>', unsafe_allow_html=True)
                                                      
         adeno_acc = 91 # conflicting with large
         large_acc = 94 
