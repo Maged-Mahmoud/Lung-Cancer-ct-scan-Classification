@@ -81,19 +81,19 @@ if st.sidebar.button("Click Here to Classify"):
         st.header("Algorithm Predicts: ")
                 
         # Classify output 
-        st.write(f"{str.upper(prediction)}.", '\n' )
+        st.header(f"{str.upper(prediction)}.", '\n' )
                                                      
-adeno_acc = 91 # conflicting with large
-large_acc = 94 
-normal_acc = 98.5
-squamous_acc = 92 #conflicting with adeno
+        adeno_acc = 91 # conflicting with large
+        large_acc = 94 
+        normal_acc = 98.5
+        squamous_acc = 92 #conflicting with adeno
 
-acc = {'adeno_acc':91,'large_acc':94,'normal_acc':98.5,'squamous_acc':92}
-df_acc = pd.DataFrame(acc.values(),index=acc.keys(),columns=['ACCURACY %'])
-ax = df_acc.plot(kind='bar', stacked= True, figsize= (10,6), ylabel= 'Accuracy %',legend = None)
+        acc = {'adeno_acc':91,'large_acc':94,'normal_acc':98.5,'squamous_acc':92}
+        df_acc = pd.DataFrame(acc.values(),index=acc.keys(),columns=['ACCURACY %'])
+        ax = df_acc.plot(kind='bar', stacked= True, figsize= (10,6), ylabel= 'Accuracy %',legend = None)
 
-for container in ax.containers:
-    ax.bar_label(container)
+        for container in ax.containers:
+            ax.bar_label(container)
 
-st.header("Model Accuracy: ")
-st.write(ax, '\n' )
+        st.header("Model Accuracy: ")
+        st.bar_chart(df_acc, '\n' )
