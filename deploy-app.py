@@ -44,7 +44,14 @@ def predict(image):
 st.title("Lung Cancer CT-SCAN Classification App")
 # For newline
 st.write('\n')
-
+hide_menu_style = '''
+    <style>
+    # MainMenu{visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    
+                    '''
+st.markdown(hide_menu_style, unsafe_allow_html = True)
 img = Image.open('images/image.png')
 show = st.image(img, use_column_width=True)
 
