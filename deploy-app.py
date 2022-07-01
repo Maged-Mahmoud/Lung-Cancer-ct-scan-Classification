@@ -42,6 +42,7 @@ def predict(image):
 # %% [code] {"execution":{"iopub.status.busy":"2022-06-29T14:45:58.84557Z","iopub.execute_input":"2022-06-29T14:45:58.84607Z","iopub.status.idle":"2022-06-29T14:45:58.85054Z","shell.execute_reply.started":"2022-06-29T14:45:58.846006Z","shell.execute_reply":"2022-06-29T14:45:58.849725Z"}}
 # Designing the interface
 st.title("Lung Cancer CT-SCAN Classification App")
+st.text(' The model classifies across FOUR classes: Adenocarcinoma, Large Cell Carcinoma, Normal, and Squamous Cell Carcinoma)
 # For newline
 st.write('\n')
 hide_menu_style = '''
