@@ -96,4 +96,4 @@ if st.sidebar.button("Click Here to Classify"):
             ax.bar_label(container)
 
         st.header("Model Accuracy: ")
-        st.bar_chart(df_acc,use_column_width=True)
+        st.bar_chart(df_acc,use_container_width =True)
